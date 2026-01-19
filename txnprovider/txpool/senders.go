@@ -286,7 +286,6 @@ func EncodeSender(nonce uint64, balance uint256.Int, buffer []byte) {
 		fieldSet = 1
 		nonceBytes := common.BitLenToByteLen(bits.Len64(nonce))
 		buffer[pos] = byte(nonceBytes)
-		var nonce = nonce
 		for i := nonceBytes; i > 0; i-- {
 			buffer[pos+i] = byte(nonce)
 			nonce >>= 8
